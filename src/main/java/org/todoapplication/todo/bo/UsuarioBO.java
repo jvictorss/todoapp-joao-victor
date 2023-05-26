@@ -26,7 +26,6 @@ public class UsuarioBO {
         this.userRepository = userRepository;
         this.mapper = new ModelMapper();
     }
-
     public Void salvarUsuario(UsuarioDTO usuarioDTO) throws CantSaveException, UserNotFoundException, PasswordInvalidException {
         Optional<Usuario> user = pesquisarEmail(usuarioDTO.getEmail());
         if(user.isPresent()) {
