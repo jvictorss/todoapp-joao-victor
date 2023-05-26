@@ -53,7 +53,7 @@ public class TodoBO {
                 todoRepository.deletar(id);
             }
             throw new TaskNotFoundException(TASK_NOT_FOUND_ERROR);
-        } catch (Exception e) { // TODO: Lançar exception genérica
+        } catch (Exception e) { 
             throw new TaskNotFoundException(TASK_NOT_FOUND_ERROR);
         }
     }
